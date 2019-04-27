@@ -16,10 +16,10 @@ npm run menu-h5
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/pc/classify.png" /><div>
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/pc/about.png" /><div>
 #移动端端效果图
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_index.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_list.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_classify.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_detail.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_about.png)
+![image](https://github.com/hqxing/menu-h5/blob/master/MobilePhone/phone_index.png)
+![image](https://github.com/hqxing/menu-h5/blob/master/MobilePhone/phone_list.png)
+![image](https://github.com/hqxing/menu-h5/blob/master/MobilePhone/phone_classify.png)
+![image](https://github.com/hqxing/menu-h5/blob/master/MobilePhone/phone_detail.png)
+![image](https://github.com/hqxing/menu-h5/blob/master/MobilePhone/phone_about.png)
 
 
