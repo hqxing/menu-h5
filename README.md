@@ -10,23 +10,45 @@ npm run menu-h5
 ```
 ### PC端效果图
 
+>首页
+
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/index.png" /></div>
+
+>菜谱列表
+
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/list.png" /></div>
+
+>菜谱详情
+
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/detail.png" /></div>
+
+>菜谱分类
+
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/classify.png" /></div>
+
+>关于
+
 <div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/about.png" /></div>
 
 ### 移动端效果图
 
+>首页
+
 <div vertical-align="top" >
-  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_index.png" width="375" height="auto" />
-  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_list.png" width="375" height="auto" />
+  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_index.png" width="375" height="auto" />  
 </div> 
+
+>菜谱列表、菜谱详情
+
 <div vertical-align="top">
- <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_classify.png"  width="375" height="auto"/>
+ <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_list.png" width="375" height="auto" /> 
  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_detail.png"  width="375" height="auto"/>
 </div>
+
+>菜谱分类、关于
+
 <div vertical-align="top">
+ <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_classify.png"  width="375" height="auto"/>
  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_about.png"  width="375" height="auto"/>
 </div>
  
