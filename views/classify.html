@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../static/js/jquery-3.3.1.min.js"></script>
+  <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/styles/public.css">
+  <title>classify</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../static/images/logol.png" alt=""></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../views/index">首页</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">分类 <span class="caret"></span></a>
+                <ul class="dropdown-menu multi-column columns-2">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        <h6 class="classParentid">菜系</h6>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        <h6 class="classParentid">场景</h6>
+                      </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </ul>
+              </li>
+              <li><a href="../views/about">关于</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </nav>
+    </header>
+    <div class="classify_content">
+      <div class="classify_top">
+        <h2>
+          吃货的世界
+          </br>
+          <span>我懂</span>
+        </h2>
+      </div>
+      <div class="container classify_container">
+
+        <div class="carousel_nav" id="carousel_nav_0">
+          <ul class="nav nav-tabs nav-justified">
+          </ul>
+        </div>
+        <div class="carousel_nav" id="carousel_nav_1">
+          <ul class="nav nav-tabs nav-justified">
+          </ul>
+        </div>
+        <div class="carousel_tab" id="carousel_tab_0"></div>
+        <div class="carousel_tab" id="carousel_tab_1"></div>
+      </div>
+
+    </div>
+    <footer>
+      <p>Copyright © 此网站只做学习用途</p>
+    </footer>
+  </div>
+</body>
+
+</html>
+<script src="../static/js/public.js"></script>
+<script>
+  $(document).ready(function () {
+    publicFunction.recipeClass();
+    publicFunction.searchByClassID();
+    publicFunction.writeClassifyTab();
+  });
+
+
+</script>
+<style>
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .carousel_r_list .list-group-item {
+    padding: 15px 15px;
+  }
+
+  .carousel_r_list .list-group-item>.badge {
+    float: left;
+    margin-right: 90%;
+  }
+
+  .carouselInner_name,
+  .carouselInner_tag,
+  .carouselInner_preparetime,
+  .carouselInner_cookingtime {
+    display: block;
+    margin-left: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 414px) {
+    .classify_container {
+      padding: 20px 5px;
+    }
+
+    .carousel_content {
+      margin: auto;
+    }
+
+    .carousel_l,
+    .carousel_r {
+      padding: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em 0;
+      background: #222;
+      margin: auto -15px;
+      position: relative;
+      width: auto;
+    }
+
+    .carousel_r_list .list-group-item {
+      padding: 10px 15px;
+    }
+
+    .carousel_r_list .list-group-item>.badge {
+      float: left;
+      margin-right: 2em;
+      ;
+    }
+
+    .carouselInner_name,
+    .carouselInner_tag,
+    .carouselInner_preparetime,
+    .carouselInner_cookingtime {
+      display: inline;
+      text-align: left;
+      margin: auto;
+    }
+  }
+</style>

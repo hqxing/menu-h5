@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../static/js/jquery-3.3.1.min.js"></script>
+  <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles/public.css">
+  <link rel="stylesheet" href="../static/styles/jquery.eeyellow.Timeline.css">
+  <title>detail</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../static/images/logol.png" alt=""></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../views/index">首页</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">分类 <span class="caret"></span></a>
+                <ul class="dropdown-menu multi-column columns-2">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        <h6 class="classParentid">菜系</h6>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        <h6 class="classParentid">场景</h6>
+                      </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </ul>
+              </li>
+              <li><a href="../views/about">关于</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+      </nav>
+    </header>
+
+    <div class="container detail_container">
+
+      <div class="row detail_head">
+        <div class="col-md-6">
+
+          <img src="http://api.jisuapi.com/recipe/upload/20160719/122654_94652.jpg" alt="鸡蛋虾仁炒米饭"
+            class="img-thumbnail detail_img">
+
+          <h3 class="detail_name">
+            <span class="label_name">鸡蛋虾仁炒米饭</span>
+            <span class="label label-default label_peoplenum">1-2人</span>
+            <span class="label label-default label_cookingtime">10分钟内</span>
+          </h3>
+          <h4 class="txt_tag">懒人食谱,炒,炒饭,补钙</h4>
+        </div>
+
+        <div class="col-md-6 detail_material">
+          <div class="panel panel-default">
+            <div class="panel-heading">材料</div>
+            <table class="table table-bordered">
+              <!-- 此处必须加入tbody标签，否则该组件下动态渲染tr,td样式失效 -->
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row detail_process">
+        <div class="col-md-12 txt_process">
+          <h2>制作步骤</h2>
+        </div>
+        <div class="col-md-12">
+          <div class="VivaTimeline">
+            <dl>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="div1"></div>
+    <footer>
+      <p>Copyright © 此网站只做学习用途</p>
+    </footer>
+
+  </div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="../static/js/jquery.eeyellow.Timeline.js"></script>
+<script src="../static/js/public.js"></script>
+<script>
+  $(document).ready(function () {
+    publicFunction.recipeClass();
+    /* 时间轴 */
+    $('.VivaTimeline').vivaTimeline({
+      carousel: true,
+      carouselTime: 3000
+    });
+
+    //菜谱详情接口返回的data
+    var data;
+    //把url上传过来的ID作为参数查询菜谱详情
+    var idVal = publicFunction.getQueryString("id");
+    seachFoodDetail(idVal)
+    //根据菜谱ID查询详情
+    function seachFoodDetail(idVal) {
+      var detailUrl = "/apis/proxydetails?appkey=''&id=" + idVal;
+      console.log("detailUrl:", detailUrl);
+      $.ajax({
+        type: 'post',
+        dataType: 'json',
+        url: detailUrl,
+        success: function (data) {
+          if (data.result.msg === 'ok') {
+            console.log("菜谱详情有数据返回:", data.result.result.id);
+            console.log("ajaxDetailData:", data);
+            writeData(data);
+          } else {
+            console.log("菜谱详情有数据返回错误");
+          }
+        },
+        error: function (data) {
+          console.log(data);
+        }
+      });
+    };
+    //渲染数据
+    function writeData(data) {
+      var cookingtime = data.result.result.cookingtime;
+      var name = data.result.result.name;
+      var peoplenum = data.result.result.peoplenum;
+      var tag = data.result.result.tag;
+      var pic = data.result.result.pic;
+      console.log(5, name, tag, pic, cookingtime, peoplenum);
+      var materialArr = new Array();
+      materialArr = data.result.result.material;
+      var processArr = new Array();
+      processArr = data.result.result.process;
+
+      $('.detail_img').attr("src", pic);
+      $('.detail_img').attr("alt", name);
+      $('.label_name').text(name);
+      $('.txt_tag').text(tag);
+      $('.label_cookingtime').html(cookingtime);
+      $('.label_peoplenum').html(peoplenum);
+      //材料
+      $.each(materialArr, function (i, val) {
+        //console.log("材料：", i, val, name);
+        var html = '';
+        html += '<tr>';
+        html += '<td class="td_mname">' + val.mname + '</td>';
+        html += '<td class="td_amount">' + val.amount + '</td>';
+        html += '</tr>';
+        $(".detail_material").find(".table-bordered").find("tbody").append(html);
+      });
+      //步骤
+      $.each(processArr, function (i, val) {
+        //console.log("步骤：", i, val, name);//pcontent pic
+        var html = '';
+        html += '<dt></dt>';
+        html += '<dd class="pos-left clearfix">';
+        html += '<div class="circ"></div>';
+        html += '<div class="time"></div>';
+        html += '<div class="events">';
+        html += '<div class="events-header">步骤1</div>';
+        html += '<div class="events-body">';
+        html += '<div class="row" style="display: block; height: 141.625px;">';
+        html += '<div class="col-md-6 pull-left">';
+        html += '<img class="events-object img-responsive img-rounded" src="' + val.pic + '">';
+        html += '</div>';
+        html += '<div class="col-md-6 events-desc">' + val.pcontent + '</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '<div class="events-footer">';
+        html += '</div>';
+        html += '</div>';
+        html += '</dd>';
+        $(".VivaTimeline").find("dl").append(html);
+        timeLineHandle();
+      });
+    };
+    //时间轴样式处理
+    function timeLineHandle() {
+      $('.events-header').each(function (index, element) {
+        $(this).text("步骤" + (index + 1))
+      });
+      $('.VivaTimeline').find("dd").each(function (index, element) {
+        if (index % 2 == 1)
+          $(this).attr("class", "pos-right clearfix");
+        else
+          $(this).attr("class", "pos-left clearfix");
+      });
+    };
+
+  });
+
+</script>
+<style>
+  .VivaTimeline dl dt {
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+  }
+
+  .VivaTimeline dl dd .events {
+    background-color: #08cae2;
+  }
+
+  .VivaTimeline dl dd.pos-left .events:before {
+    border-color: transparent transparent transparent #08cae2
+  }
+
+  .VivaTimeline dl dd .circ {
+    background-color: #08cae2;
+  }
+
+  .VivaTimeline dl dd .events .events-header {
+    color: #fff;
+  }
+
+  .label_peoplenum {
+    background-color: #08cae2;
+  }
+
+  .txt_tag {
+    margin-top: 20px;
+    color: rgba(253, 70, 62, 0.5)
+  }
+
+  #div1 {
+    background: #08cae2;
+    height: 10rem;
+  }
+
+  .detail_material .panel-default>.panel-heading {
+    /* background-color: rgba(253, 70, 62, 0.8);
+    color: #fff;
+    border-color: rgba(253, 70, 62, 0.8); */
+    text-align: center;
+  }
+
+  .events-body .row {
+    height: auto !important;
+  }
+
+  /* .panel>.table>tbody:first-child>tr:first-child td {
+    padding: 0;
+    height: 0;
+    border: 0;
+  } */
+  /* .table>tbody>tr>td,
+  .table>tbody>tr>th,
+  .table>tfoot>tr>td,
+  .table>tfoot>tr>th,
+  .table>thead>tr>td,
+  .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  } */
+</style>

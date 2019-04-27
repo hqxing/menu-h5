@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../static/js/jquery-3.3.1.min.js"></script>
+  <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/styles/public.css">
+  <title>list</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../static/images/logol.png" alt=""></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../views/index">首页</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">分类 <span class="caret"></span></a>
+                <ul class="dropdown-menu multi-column columns-2">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        <h6 class="classParentid">菜系</h6>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6">
+                      <ul class="multi-column-dropdown">
+                        <h6 class="classParentid">场景</h6>
+                      </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </ul>
+              </li>
+              <li><a href="../views/about">关于</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+      </nav>
+    </header>
+
+    <div class="container list_container">
+      <div class="food_list_content">
+        <div class="dividing_line">
+          <p><span class="glyphicon glyphicon-star"></span></p>
+        </div>
+        <p class="list_name"></p>
+        <div class="content_page" id="page_a">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 food_list_item">
+              <a href="#" class="thumbnail l_pic_a">
+                <img src="" class="img-responsive l_pic" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/loading.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 food_list_item">
+              <a href="#" class="thumbnail r_pic_a">
+                <img src="../static/images/1.jpg" class="img-responsive r_pic" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="content_page" id="page_b">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 food_list_item">
+              <a href="#" class="thumbnail l_pic_a">
+                <img src="../static/images/1.jpg" class="img-responsive l_pic" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 food_list_item">
+              <a href="#" class="thumbnail">
+                <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 food_list_item">
+                  <a href="#" class="thumbnail">
+                    <img src="../static/images/1.jpg" class="img-responsive" alt="Responsive image">
+                    <span class="food_name"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 food_list_item">
+              <a href="#" class="thumbnail r_pic_a">
+                <img src="../static/images/1.jpg" class="img-responsive r_pic" alt="Responsive image">
+                <span class="food_name"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="...">
+          <ul class="pager">
+            <li id="previous"><a>上一页</a></li>
+            <li id="next"><a>下一页</a></li>
+          </ul>
+        </nav>
+        <p class="listPageNum"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Copyright © 此网站只做学习用途</p>
+    </footer>
+
+  </div>
+</body>
+
+</html>
+
+<script>
+  $(document).ready(function () {
+    publicFunction.recipeClass();
+    //获取url上的keyword关键字，并把根据该关键字进行搜索菜谱列表
+    var keyword = publicFunction.getQueryString("keyword");
+    console.log(000, keyword);
+    publicFunction.seachKeyFood(keyword);
+    $('.list_name').text(keyword);
+    //翻页
+    $('#page_a').addClass("active_page");
+    $('.listPageNum').html("第1页/共2页");
+    $(".food_list_content").on('click', '#previous', function () {
+      var activePage = $(".active_page").attr("id");
+      var curPage = $(".active_page");
+      console.log(123, activePage, $('#previous').parents('.food_list_content'));
+      var curParents = $('#previous').parents('.list_container');
+      changePageAnimation(curParents);
+      pageChange(activePage, curPage);
+    });
+    $(".food_list_content").on('click', '#next', function () {
+      var activePage = $(".active_page").attr("id");
+      var curPage = $(".active_page");
+      console.log(12356, activePage);
+      var curParents = $('#previous').parents('.list_container');
+      changePageAnimation(curParents);
+      pageChange(activePage, curPage);
+    });
+    function changePageAnimation(curParents) {
+      if (curParents.hasClass('flip-animation-start')) {
+        curParents.removeClass('flip-animation-start').addClass('flip-animation-end');
+        curParents.find().css('transform', 'rotate(0deg,0deg,0deg)');
+        console.log(987, curParents.find('.list_name').css('transform'))
+      } else {
+        curParents.removeClass('flip-animation-end').addClass('flip-animation-start');
+        curParents.find().css('transform', 'rotate(0deg,0deg,0deg)');
+        console.log(1987, curParents.find('.list_name').css('transform'))
+      }
+      console.log(22, curParents.attr("class"))
+    };
+    function pageChange(activePage, curPage) {
+      if (activePage == "page_a") {
+        console.log(1);
+        $('.listPageNum').html("第2页/共2页");
+        curPage.siblings(".content_page").addClass("active_page");
+        curPage.removeClass("active_page");
+      }
+      if (activePage == "page_b") {
+        console.log(2);
+        $('.listPageNum').html("第1页/共2页");
+        curPage.siblings(".content_page").addClass("active_page");
+        curPage.removeClass("active_page");
+      }
+    };
+  });
+</script>
+<script src="../static/js/public.js"></script>
+<style>
+  @media screen and (min-width: 992px) {
+
+    .l_pic_a,
+    .r_pic_a {
+      position: relative;
+      min-height: 570px;
+      border: 1px solid #ddd !important;
+    }
+
+    .l_pic,
+    .r_pic {
+      position: absolute;
+      top: 50%;
+      margin-top: -115px;
+      left: 50%;
+      margin-left: -115px !important;
+      /* width: 60%; */
+      height: auto;
+      transform: scale(1.8);
+      -ms-transform: scale(1.8);
+    }
+
+    .keyword_text {
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      -moz-transform: rotate(90deg);
+      /* Firefox */
+      -webkit-transform: rotate(90deg);
+      /* Safari 和 Chrome */
+      -o-transform: rotate(90deg);
+      /* Opera */
+    }
+
+    .food_list_item img {
+      cursor: pointer;
+      transition: all 0.6s;
+      -ms-transition: all 0.8s;
+    }
+
+    .food_list_item img:hover {
+      transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      background-color: black;
+    }
+
+    .food_list_item a {
+      border: none;
+      text-decoration: none;
+      padding-top: 10px;
+    }
+
+
+
+    .food_list_item a:hover {
+      border-color: rgba(16, 16, 16, 0.4);
+    }
+
+
+    .l_pic_a .food_name,
+    .r_pic_a .food_name {
+      line-height: 55px;
+    }
+  }
+
+
+
+  .food_list_content {
+    box-shadow: 5px 5px 15px rgba(16, 16, 16, 0.4);
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgba(121, 85, 72, 0.96);
+    border-radius: 5px 15px 15px 5px;
+  }
+
+  .content_page {
+    display: none;
+  }
+
+  .active_page {
+    display: block;
+  }
+
+  .l_pic_a+.food_name,
+  .r_pic_a+.food_name {
+    position: relative;
+    margin-top: -30px;
+    line-height: 30px;
+    height: 30px;
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .glyphicon-star:before {
+    font-size: 4rem;
+    margin-left: 8px;
+    margin-right: 5px;
+  }
+
+  .dividing_line p {
+    text-align: center;
+  }
+
+  .dividing_line p span {
+    border-bottom: 4px solid #333;
+  }
+
+  .list_name {
+    text-align: center;
+    border: none;
+    margin: auto auto 20px auto;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .food_name {
+    display: block;
+    text-align: center;
+    color: #795548f5;
+    line-height: 26px;
+  }
+
+  .food_list_item a {
+    border: none;
+    text-decoration: none;
+    padding-top: 15px;
+  }
+
+  .listPageNum {
+    color: #333;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .listPageNum:hover {
+    color: #ddd;
+    font-size: 1.8rem;
+  }
+
+  .flip-animation-start {
+    animation: flipBook1 3s backwards;
+    -moz-animation: flipBook1 3s backwards;
+    /* Firefox */
+    -webkit-animation: flipBook1 3s backwards;
+    /* Safari and Chrome */
+    -o-animation: flipBook1 3s backwards;
+    /* Opera */
+  }
+
+  .flip-animation-end {
+    animation: flipBook2 3s backwards;
+    -moz-animation: flipBook2 3s backwards;
+    /* Firefox */
+    -webkit-animation: flipBook2 3s backwards;
+    /* Safari and Chrome */
+    -o-animation: flipBook2 3s backwards;
+    /* Opera */
+  }
+
+  .flip-animation-start span,
+  .flip-animation-end span {
+    -moz-transform: none !important;
+    -webkit-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+
+  @keyframes flipBook1 {
+    0% {
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+
+    40% {
+      -webkit-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+      -o-transform: rotateY(90deg);
+      transform: rotateY(90deg);
+    }
+
+
+    100% {
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+  }
+
+  @keyframes flipBook2 {
+    0% {
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+
+    40% {
+      -webkit-transform: rotateY(45deg);
+      -ms-transform: rotateY(45deg);
+      -o-transform: rotateY(45deg);
+      transform: rotateY(45deg);
+    }
+
+    100% {
+      -webkit-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+      -o-transform: rotateY(90deg);
+      transform: rotateY(90deg);
+    }
+  }
+</style>
