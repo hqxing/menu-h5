@@ -8,18 +8,25 @@ npm install
 # serve at localhost:8081
 npm run menu-h5
 ```
-### 效果图
-> PC端效果图
-<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/index.png" /><div>
-<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/list.png" /><div>
-<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/detail.png" /><div>
-<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/classify.png" /><div>
-<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/about.png" /><div>
-> 移动端端效果图
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_index.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_list.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_classify.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_detail.png)
-![image](https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_about.png)
+### PC端效果图
 
+<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/index.png" /></div>
+<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/list.png" /></div>
+<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/detail.png" /></div>
+<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/classify.png" /></div>
+<div align=center><img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/pc/about.png" /></div>
 
+### 移动端效果图
+
+<div vertical-align="top" >
+  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_index.png" width="375" height="auto" />
+  <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_list.png" width="375" height="auto" />
+</div> 
+<div vertical-align="top">
+ <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_classify.png"  width="375" height="auto"/>
+ <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_detail.png"  width="375" height="auto"/>
+</div>
+<div vertical-align="top">
+ <img src="https://github.com/hqxing/menu-h5/blob/master/menu-h5-rendering/MobilePhone/phone_about.png"  width="375" height="auto"/>
+</div>
+ 
